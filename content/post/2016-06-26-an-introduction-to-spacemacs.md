@@ -1,6 +1,7 @@
 ---
 title: An introduction to spacemacs
-type: "post"
+date: 2016-06-27
+tags: ["emacs", "editor", "spacemacs"]
 ---
 
 One of my joys as a developer is investing time tweaking and editing my own development tools. Not only is this therapeutic, but I get a buzz out of improving the efficacy of my work.
@@ -36,7 +37,7 @@ The beautiful part about using extensible software is making it your own. Spacem
 
 Enabled some cool layers
 
-```
+```lisp
 dotspacemacs-configuration-layers
 '(auto-completion
   better-defaults
@@ -56,7 +57,7 @@ dotspacemacs-configuration-layers
 
 Added solarized dark colorscheme
 
-```
+```lisp
 dotspacemacs-themes '(solarized-light
                       solarized-dark
                       zenburn
@@ -65,7 +66,7 @@ dotspacemacs-themes '(solarized-light
 
 Added `jk` as my `evil-escape-sequence`. This does what `ESC` does in vim-mode
 
-```
+```lisp
 (setq-default evil-escape-key-sequence "jk")
 ```
 

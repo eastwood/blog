@@ -1,0 +1,36 @@
+baseURL: 'http://system2.io/'
+title: System 2
+languageCode: en-us
+theme: simple-theme
+paginate: 3
+paginatePath: page
+copyright: © 2019 — Clint Ryan
+pygmentsCodefences: true
+pygmentsCodeFencesGuessSyntax: true
+pygmentsoptions: linenos=table
+pygmentsStyle: vs
+taxonomies:
+  tag: tags
+  category: categories
+menu:
+  main:
+    - url: /post/
+      name: blog
+      weight: 1
+    - url: /about/
+      name: about
+      weight: 2
+  footer:
+    - url: 'https://github.com/eastwood'
+      name: GitHub
+      weight: 1
+    - url: /post/index.xml
+      name: RSS
+      weight: 2
+    - url: 'https://twitter.com/_eastwd'
+      name: Twitter
+      weight: 3
+permalinks:
+  post: '/:year/:month/:title/'
+params:
+  datefmt: '2006-01-02'

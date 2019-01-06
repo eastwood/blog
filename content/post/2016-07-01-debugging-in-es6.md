@@ -1,5 +1,7 @@
 ---
 title: Debugging in ES6
+date: 2016-07-01
+tags: ["javascript", "node", "debug"]
 type: "post"
 ---
 
@@ -11,7 +13,7 @@ Node 6 is pretty [close](http://node.green/) to implementing all of ES6 proposed
 ### Setting up babel
 Installing babel is dead simple, let's get started with an example project:
 
-```
+```json
 # package.json
 {
   "name": "es6-debug-sample",
@@ -30,7 +32,7 @@ Installing babel is dead simple, let's get started with an example project:
 
 Next, we're going to create basic file in `src/index.js`:
 
-```
+```javascript
 import foo from './foo'
 
 foo('hello world');
@@ -39,7 +41,7 @@ foo('hello world');
 
 and `src/foo.js`
 
-```
+```javascript
 export default function(str) {
   debugger; // this is going to breakpoint our debugger
   console.log(str);
@@ -49,7 +51,7 @@ export default function(str) {
 
 Now let's run `npm run build`, we should see a new `dist` folder with the compiled output. For example `dist/index.js`
 
-```
+```javascript
 // ES5 compiled output
 
 'use strict';
