@@ -7,15 +7,17 @@
 
 {{/* List all pages */}}
 <h1>Posts</h1>
+<hr/>
 <ul>
-    {{ range .Paginator.Pages }}
-    <li>
-        <a href="{{ .RelPermalink }}">
-            {{- .Title | markdownify }}
-        </a>
-        {{ partial "post_meta.html" . }}
-    </li>
-    {{ end }}
+  {{ $paginator := .Paginate (where .Pages "Type" "post") 5 }}
+  {{ range $paginator.Pages }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+      {{- .Title | markdownify }}
+    </a>
+    {{ partial "post_meta.html" . }}
+  </li>
+  {{ end }}
 </ul>
 
 {{/* Display paginator */}}

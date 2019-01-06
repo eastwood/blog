@@ -1,5 +1,6 @@
 ---
 title: An introduction to spacemacs
+type: "post"
 ---
 
 One of my joys as a developer is investing time tweaking and editing my own development tools. Not only is this therapeutic, but I get a buzz out of improving the efficacy of my work.

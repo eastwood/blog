@@ -1,5 +1,6 @@
 ---
 title: Debugging in ES6
+type: "post"
 ---
 
 In the advent of ES6 and transpilers, writing clean and concise javascript has never been so easy and kind on the soul. However, using a compiler presents some challenges when it comes to debugging, namely in relation to mapping the source code to the compiled output. Fortunately, this isn't a new problem and has been solved for plenty of other compilers. In this post, we'll focus on javascript's most popular compiler, [babel](http://babel.org) and the tools to use to enable this.

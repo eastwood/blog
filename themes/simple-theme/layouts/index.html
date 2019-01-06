@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<header>
+  <h1>
+    {{- .Title | markdownify -}}
+  </h1>
+  <hr/>
+</header>
+<article>
+  {{ .Content }}
+</article>
+<ul>
+  {{ $paginator := .Paginate (where .Pages "Type" "post") }}
+  {{ range $paginator.Pages }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+      {{- .Title | markdownify }}
+    </a>
+    {{ partial "post_meta.html" . }}
+  </li>
+  {{ end }}
+</ul>
+
+{{ end }}

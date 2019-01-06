@@ -3,14 +3,14 @@ title = "System 2"
 languageCode = "en-us"
 
 # Theme to use
-theme = "simple-hugo-theme"
+theme = "simple-theme"
 
 # Pagination
 paginate = 3
 paginatePath = "page"
 
 # Copyright
-copyright = "© 2019 — Clint Ryan — All rights reserved."
+copyright = "© 2019 — Clint Ryan"
 
 # Highlighting
 pygmentsCodefences = true
@@ -45,7 +45,7 @@ pygmentsStyle = "vs"
     name = "RSS"
     weight = 2
   [[menu.footer]]
-    url = "twitter.com/_eastwd"
+    url = "https://twitter.com/_eastwd"
     name = "Twitter"
     weight = 3
 
