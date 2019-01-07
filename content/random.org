@@ -1,4 +1,5 @@
----
-title: Random
----
+#+TITLE: Random
+
+Dumping ground for disposable snippets when I need to share
+
 
