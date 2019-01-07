@@ -9,6 +9,7 @@ pygmentsCodefences: true
 pygmentsCodeFencesGuessSyntax: true
 pygmentsoptions: linenos=table
 pygmentsStyle: vs
+enableEmoji: true
 taxonomies:
   tag: tags
   category: categories
