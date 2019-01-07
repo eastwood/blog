@@ -1,5 +1,7 @@
 ---
 title: About
+type: about
+
 ---
 
 # Purpose
