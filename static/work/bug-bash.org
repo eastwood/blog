@@ -38,4 +38,5 @@
     - Maps partnerAgeBasedDiscountAssessmentDate => assessment_date_person_2
 ** Resources
    - https://confluence.nib.com.au/pages/viewpage.action?spaceKey=PBC&title=Quote+API+changes
+   - [[https://omni-quote-api-phisl-1065.kaos.internal.nibit.com.au/api-docs/#/Session/post_v1_session][OmniQuote Swagger]]
    - [[http://example.com][Postman]]
