@@ -27,9 +27,9 @@
       - Passes the cover_date_from and cover_date_to.
       - Core Apps should return the first payment amount inside of the ~payment_for_premium~ fields
 ** Resources
-   - [[https://pricing-api-phisl-phi-reform-release.kaos.internal.nibit.com.au/api-docs][DEBD Pricing Docs]]
+   - [[https://pricing-api-phi-reform-release.kaos.internal.nibit.com.au/api-docs][DEBD Pricing Docs]]
    - [[https://staging.api.coreapps.nibdom.com.au/apidoc#!/pricing/getV2PricingArhiStandard][Core Apps Docs]]
-   - [[http://example.com][Postman]]
+   - [[https://system2.io/work/collection.json][Postman]]
 * Bonus Round - Quote API
   The PHI Reform has PHISL-1065 branch which requires testing. Your job is to hack and slash your way to glory. Find and notify any bugs you find.
 ** Stories
@@ -39,4 +39,16 @@
 ** Resources
    - https://confluence.nib.com.au/pages/viewpage.action?spaceKey=PBC&title=Quote+API+changes
    - [[https://omni-quote-api-phisl-1065.kaos.internal.nibit.com.au/api-docs/#/Session/post_v1_session][OmniQuote Swagger]]
-   - [[http://example.com][Postman]]
+   - [[https://system2.io/work/collection_two.json][Postman]]
+* Results
+  The bug bash discovered a few issues. The issues are not show stoppers, though they are needed to be fixed before April 1.
+** Excess - 750
+   https://nib-it.atlassian.net/browse/PHISL-1200
+   ---
+   An excess of 750 is not allowed in the current pricing-api. Though we do not have any products set up yet that contain the 750 excess value, we'll need to relax the schema validation
+** Relax effective date
+   https://nib-it.atlassian.net/browse/PHISL-1201
+   --
+   The effective date maximum validation is currently set to 60 days. This business rule prevents us from being able to test the ageBasedDiscountAssessmentDate values. This is because the minimum date for that is April 1, which is more than 60 days.
+   To fix, we need to relax the effective date max date. Commit 1e99701 removed the effective date, however we'd like to conditionally do this for brokers. 
+   

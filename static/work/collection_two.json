@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
+						"id": "f2fdcad4-e48b-4bd3-8ad4-bc6abd891704",
 						"exec": [
 							"pm.test(\"should have default properties set to null\", function () {",
 							"    var jsonData = pm.response.json();",
@@ -24,17 +24,19 @@
 							"    pm.expect(jsonData.data.experiments).to.eql(null);",
 							"});",
 							""
-						]
+						],
+						"type": "text/javascript"
 					}
 				},
 				{
 					"listen": "prerequest",
 					"script": {
-						"type": "text/javascript",
+						"id": "eba7f2ee-b5bf-4bc5-9911-aa294741b0e1",
 						"exec": [
 							"postman.setEnvironmentVariable(\"coverStartDate\", Date.create('today').format('{yyyy}-{MM}-{dd}'));",
 							""
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -48,15 +50,21 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"productSelection\": null,\n\t\"financialDetails\": null,\n\t\"governmentDetails\": null,\n\t\"personalDetails\": null,\n\t\"contactDetails\": null,\n\t\"joinProgress\": null,\n\t\"experiments\": null\n}"
+					"raw": "{\n    \"lastModifiedDateTimeUtc\": \"2018-01-01T00:00:00.000Z\",\n    \"creationDateTimeUtc\": \"2018-01-01T00:00:00.000Z\",\n    \"company\": null,\n    \"aboutYouDetails\": {\n        \"hasCompletedAboutYou\": false,\n        \"extrasCoverLevel\": null,\n        \"hospitalCoverLevel\": null,\n        \"motivator\": null,\n        \"visitorType\": null\n    },\n    \"contactDetails\": {\n        \"address\": {\n            \"addressLine\": null,\n            \"isManualEntry\": false,\n            \"postcode\": null,\n            \"state\": \"NSW\",\n            \"suburb\": null\n        },\n        \"phoneNumbers\": []\n    },\n    \"financialDetails\": {\n        \"coverStartDate\": {\n            \"date\": null,\n            \"starting\": \"Today\"\n        },\n        \"paymentFrequency\": \"Monthly\",\n        \"paymentMethod\": \"DirectDebit\",\n        \"paymentStartDate\": null\n    },\n    \"governmentDetails\": {\n        \"applyGovernmentRebate\": true,\n        \"governmentRebateAcknowledgement\": {\n            \"areAllPeopleOnPolicyEntitledToMedicare\": true,\n            \"areYouCoveredByThisPolicy\": true,\n            \"declarationAllDetailsCorrect\": true,\n            \"rebateIsRequested\": true\n        },\n        \"incomeTier\": \"Tier0\",\n        \"medicareExpiry\": null,\n        \"medicareNumber\": null,\n        \"partnerPreviousFundDetails\": {\n            \"code\": null,\n            \"description\": null,\n            \"policyNumber\": null,\n            \"previouslyHadHealthInsurance\": null\n        },\n        \"policyHolderPreviousFundDetails\": {\n            \"code\": null,\n            \"description\": null,\n            \"policyNumber\": null,\n            \"previouslyHadHealthInsurance\": null\n        }\n    },\n    \"isCurrentCustomer\": false,\n    \"joinProgress\": {\n        \"firstInvalidPage\": null,\n        \"hasAcceptedDirectDebitServiceAgreement\": false,\n        \"hasAgreedToNibFundRules\": false,\n        \"hasDependantsEntered\": false,\n        \"hasPartnerEntered\": false,\n        \"userAgent\": null,\n        \"quoteSource\": \"QuoteV3\"\n    },\n    \"offerDetails\": {\n        \"campaignDescription\": null,\n        \"campaignId\": null,\n        \"offerId\": null,\n        \"promoCode\": null,\n        \"welcomeEmailOfferTemplate\": null,\n        \"whicsCampaignCode\": null\n    },\n    \"personalDetails\": {\n        \"dependants\": [],\n        \"partner\": {\n            \"dateOfBirth\": null,\n            \"firstName\": null,\n            \"gender\": null,\n            \"lastName\": null,\n            \"title\": null\n        },\n        \"policyHolder\": {\n            \"dateOfBirth\": null,\n            \"email\": null,\n            \"firstName\": null,\n            \"gender\": null,\n            \"lastName\": null,\n            \"title\": null\n        },\n        \"scale\": \"Single\"\n    },\n    \"productSelection\": {\n        \"combined\": null,\n        \"extras\": {\n            \"id\": null\n        },\n        \"hospital\": {\n            \"excess\": 500,\n            \"id\": null\n        }\n    },\n    \"experiments\": []\n}"
 				},
 				"url": {
-					"raw": "{{HTTP_PROTOCOL}}://{{APP_NAME}}{{SLICE}}{{HOSTNAME}}/session",
-					"protocol": "{{HTTP_PROTOCOL}}",
+					"raw": "https://omni-quote-api-PHISL-1065.kaos.internal.nibit.com.au/v1/session",
+					"protocol": "https",
 					"host": [
-						"{{APP_NAME}}{{SLICE}}{{HOSTNAME}}"
+						"omni-quote-api-PHISL-1065",
+						"kaos",
+						"internal",
+						"nibit",
+						"com",
+						"au"
 					],
 					"path": [
+						"v1",
 						"session"
 					]
 				},
