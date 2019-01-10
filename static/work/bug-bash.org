@@ -1,0 +1,32 @@
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+ #+OPTIONS: ^:nil
+** IN-PROGRESS [#A] Prepare for bug bash on Thursday
+   SCHEDULED: <2019-01-10 Thu 15:30>
+   - State "IN-PROGRESS" from "TODO"       [2019-01-09 Thu 11:15]
+*** Resources
+    - [[https://pricing-api-phisl-phi-reform-release.kaos.internal.nibit.com.au/api-docs][DEBD Pricing Docs]]
+    - [[https://staging.api.coreapps.nibdom.com.au/apidoc#!/pricing/getV2PricingArhiStandard][Core Apps Docs]]
+    - [[postman/collection.json][Postman]]
+*** Stories
+**** [[https://nib-it.atlassian.net/browse/PHISL-1054][PHISL-1054]]
+     - Basic integration with new v2/pricing/arhi API
+     - Main changes are cover_period_date_from is inclusive
+     - Ambulance is now a bool
+     - state is in 'NSW', 'QLD' etc
+     - scale is 'Single', 'Couple' etc.
+     - frequency is now 'Weekly', 'Fortnightly', etc
+**** [[https://nib-it.atlassian.net/browse/PHISL-1056][PHISL-1056]]
+     - Same as 1054, but for the split invoicing endpoint
+**** [[https://nib-it.atlassian.net/browse/PHISL-1057][PHISL-1057]]
+     - [1] Core API has assessment_date_person_1 and assessment_date_person_2 fields
+     - [2] Pricing API takes two parameters:
+       + ageBasedDiscountAssessmentDate
+       + partnerAgeBasedDiscountAssessmentDate
+     - We map these parameters [1] to [2]
+     - There is a few other fields in review environment: previous_fund_discount_person_1, previous_fund_discount_person_2 which have not been mapped on https://git.nib.com.au/nib-au/pricing-api/pull/47/files
+**** [[https://nib-it.atlassian.net/browse/PHISL-1058][PHISL-1058]]
+     - Same as above, but for split invoice
+**** [[https://nib-it.atlassian.net/browse/PHISL-733][PHISL-733]]
+     - Calculates the first payment amount
+     - Passes the cover_date_from and cover_date_to.
+     - Core Apps should return the first payment amount inside of the ~payment_for_premium~ fields

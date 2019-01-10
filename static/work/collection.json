@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "e3024b42-d934-451a-b844-b010ce604fee",
+		"name": "Pricing Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Single - No AgeBasedDiscount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://pricing-api-phi-reform-release.kaos.internal.nibit.com.au/v1/insurance/health/australian-resident?incomeTier=Tier0&paymentFrequency=Monthly&paymentMethod=DirectDebit&state=NSW&scale=Single&excess=500&extrasProduct=55&hospitalProduct=51&rate=B96&rebateTier=0",
+					"protocol": "https",
+					"host": [
+						"pricing-api-phi-reform-release",
+						"kaos",
+						"internal",
+						"nibit",
+						"com",
+						"au"
+					],
+					"path": [
+						"v1",
+						"insurance",
+						"health",
+						"australian-resident"
+					],
+					"query": [
+						{
+							"key": "incomeTier",
+							"value": "Tier0"
+						},
+						{
+							"key": "paymentFrequency",
+							"value": "Monthly"
+						},
+						{
+							"key": "paymentMethod",
+							"value": "DirectDebit"
+						},
+						{
+							"key": "state",
+							"value": "NSW"
+						},
+						{
+							"key": "scale",
+							"value": "Single"
+						},
+						{
+							"key": "excess",
+							"value": "500"
+						},
+						{
+							"key": "extrasProduct",
+							"value": "55"
+						},
+						{
+							"key": "hospitalProduct",
+							"value": "51"
+						},
+						{
+							"key": "rate",
+							"value": "B96"
+						},
+						{
+							"key": "rebateTier",
+							"value": "0"
+						}
+					]
+				},
+				"description": "PHI Reform Release - Bug Bash\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Single - with AgeBasedDiscount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://pricing-api-phi-reform-release.kaos.internal.nibit.com.au/v1/insurance/health/australian-resident?incomeTier=Tier0&paymentFrequency=Monthly&paymentMethod=DirectDebit&state=NSW&scale=Single&excess=500&extrasProduct=55&hospitalProduct=51&rate=B96&rebateTier=0",
+					"protocol": "https",
+					"host": [
+						"pricing-api-phi-reform-release",
+						"kaos",
+						"internal",
+						"nibit",
+						"com",
+						"au"
+					],
+					"path": [
+						"v1",
+						"insurance",
+						"health",
+						"australian-resident"
+					],
+					"query": [
+						{
+							"key": "incomeTier",
+							"value": "Tier0"
+						},
+						{
+							"key": "paymentFrequency",
+							"value": "Monthly"
+						},
+						{
+							"key": "paymentMethod",
+							"value": "DirectDebit"
+						},
+						{
+							"key": "state",
+							"value": "NSW"
+						},
+						{
+							"key": "scale",
+							"value": "Single"
+						},
+						{
+							"key": "excess",
+							"value": "500"
+						},
+						{
+							"key": "extrasProduct",
+							"value": "55"
+						},
+						{
+							"key": "hospitalProduct",
+							"value": "51"
+						},
+						{
+							"key": "rate",
+							"value": "B96"
+						},
+						{
+							"key": "rebateTier",
+							"value": "0"
+						}
+					]
+				},
+				"description": "PHI Reform Release - Bug Bash\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Couple - No AgeBasedDiscount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://pricing-api-phi-reform-release.kaos.internal.nibit.com.au/v1/insurance/health/australian-resident?incomeTier=Tier0&paymentFrequency=Monthly&paymentMethod=DirectDebit&state=NSW&scale=Single&excess=500&extrasProduct=55&hospitalProduct=51&rate=B96&rebateTier=0",
+					"protocol": "https",
+					"host": [
+						"pricing-api-phi-reform-release",
+						"kaos",
+						"internal",
+						"nibit",
+						"com",
+						"au"
+					],
+					"path": [
+						"v1",
+						"insurance",
+						"health",
+						"australian-resident"
+					],
+					"query": [
+						{
+							"key": "incomeTier",
+							"value": "Tier0"
+						},
+						{
+							"key": "paymentFrequency",
+							"value": "Monthly"
+						},
+						{
+							"key": "paymentMethod",
+							"value": "DirectDebit"
+						},
+						{
+							"key": "state",
+							"value": "NSW"
+						},
+						{
+							"key": "scale",
+							"value": "Single"
+						},
+						{
+							"key": "excess",
+							"value": "500"
+						},
+						{
+							"key": "extrasProduct",
+							"value": "55"
+						},
+						{
+							"key": "hospitalProduct",
+							"value": "51"
+						},
+						{
+							"key": "rate",
+							"value": "B96"
+						},
+						{
+							"key": "rebateTier",
+							"value": "0"
+						}
+					]
+				},
+				"description": "PHI Reform Release - Bug Bash\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Couple - AgeBasedDiscount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://pricing-api-phi-reform-release.kaos.internal.nibit.com.au/v1/insurance/health/australian-resident?incomeTier=Tier0&paymentFrequency=Monthly&paymentMethod=DirectDebit&state=NSW&scale=Single&excess=500&extrasProduct=55&hospitalProduct=51&rate=B96&rebateTier=0",
+					"protocol": "https",
+					"host": [
+						"pricing-api-phi-reform-release",
+						"kaos",
+						"internal",
+						"nibit",
+						"com",
+						"au"
+					],
+					"path": [
+						"v1",
+						"insurance",
+						"health",
+						"australian-resident"
+					],
+					"query": [
+						{
+							"key": "incomeTier",
+							"value": "Tier0"
+						},
+						{
+							"key": "paymentFrequency",
+							"value": "Monthly"
+						},
+						{
+							"key": "paymentMethod",
+							"value": "DirectDebit"
+						},
+						{
+							"key": "state",
+							"value": "NSW"
+						},
+						{
+							"key": "scale",
+							"value": "Single"
+						},
+						{
+							"key": "excess",
+							"value": "500"
+						},
+						{
+							"key": "extrasProduct",
+							"value": "55"
+						},
+						{
+							"key": "hospitalProduct",
+							"value": "51"
+						},
+						{
+							"key": "rate",
+							"value": "B96"
+						},
+						{
+							"key": "rebateTier",
+							"value": "0"
+						}
+					]
+				},
+				"description": "PHI Reform Release - Bug Bash\t"
+			},
+			"response": []
+		}
+	]
+}
