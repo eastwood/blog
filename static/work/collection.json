@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "e3024b42-d934-451a-b844-b010ce604fee",
-		"name": "Pricing Api",
+		"name": "PHI Reform - Bug Bash",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -294,6 +294,21 @@
 					]
 				},
 				"description": "PHI Reform Release - Bug Bash\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Public Sales Api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
 			},
 			"response": []
 		}

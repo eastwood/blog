@@ -1,13 +1,10 @@
+#+TITLE: Bug Bash - PHI Reform
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
- #+OPTIONS: ^:nil
-** IN-PROGRESS [#A] Prepare for bug bash on Thursday
-   SCHEDULED: <2019-01-10 Thu 15:30>
-   - State "IN-PROGRESS" from "TODO"       [2019-01-09 Thu 11:15]
-*** Resources
-    - [[https://pricing-api-phisl-phi-reform-release.kaos.internal.nibit.com.au/api-docs][DEBD Pricing Docs]]
-    - [[https://staging.api.coreapps.nibdom.com.au/apidoc#!/pricing/getV2PricingArhiStandard][Core Apps Docs]]
-    - [[postman/collection.json][Postman]]
-*** Stories
+#+OPTIONS: ^:nil
+
+* Instructions
+  The PHI reform branch setup in pricing-api requires some battle testing. Your job is to hack, slack and test the DEBD pricing api branch, attempting to find any bugs that may have been missed. Below you'll find the stories which define the acceptance criteria and a brief description of the changes they make. You'll also find resources to the APIs that we're using and a Postman collection to import which will get you started with querying our pricing api.
+* Stories
 **** [[https://nib-it.atlassian.net/browse/PHISL-1054][PHISL-1054]]
      - Basic integration with new v2/pricing/arhi API
      - Main changes are cover_period_date_from is inclusive
@@ -30,3 +27,7 @@
      - Calculates the first payment amount
      - Passes the cover_date_from and cover_date_to.
      - Core Apps should return the first payment amount inside of the ~payment_for_premium~ fields
+* Resources
+  - [[https://pricing-api-phisl-phi-reform-release.kaos.internal.nibit.com.au/api-docs][DEBD Pricing Docs]]
+  - [[https://staging.api.coreapps.nibdom.com.au/apidoc#!/pricing/getV2PricingArhiStandard][Core Apps Docs]]
+  - [[postman/collection.json][Postman]]
