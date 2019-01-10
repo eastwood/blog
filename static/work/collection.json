@@ -301,13 +301,112 @@
 			"name": "Public Sales Api",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2dhdGV3YXktcmV2aWV3Lm5pYi5jb20uYXUiLCJpYXQiOjE0NTMxNTg4OTcsImV4cCI6MTczNzI0MjA5NywiYXVkIjoiIiwic3ViIjoiU3VuY29ycCJ9.ONml4HQJPV_nGlTllGhfOPRrT0rOO9DtkHFNO2vDOIE",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "https://gateway-phi-reform-release-nib.kaos.nibit.com.au/prices?groupId=96001&incomeTier=Tier0&paymentFrequency=Monthly&paymentMethod=DirectDebit&sectionId=901&state=NSW&scale=Couple&applyGovernmentRebate=true&excess=500&extrasProduct=55&hospitalProduct=51&partner.dateOfBirth=1988-01-01&partner.previouslyHadHealthInsurance=true&partnerDob=1988-01-01&partnerPreviousCover=true&group=96001&section=901&rate=B96&rebateTier=0&applyRebate=true",
+					"protocol": "https",
+					"host": [
+						"gateway-phi-reform-release-nib",
+						"kaos",
+						"nibit",
+						"com",
+						"au"
+					],
+					"path": [
+						"prices"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "96001"
+						},
+						{
+							"key": "incomeTier",
+							"value": "Tier0"
+						},
+						{
+							"key": "paymentFrequency",
+							"value": "Monthly"
+						},
+						{
+							"key": "paymentMethod",
+							"value": "DirectDebit"
+						},
+						{
+							"key": "sectionId",
+							"value": "901"
+						},
+						{
+							"key": "state",
+							"value": "NSW"
+						},
+						{
+							"key": "scale",
+							"value": "Couple"
+						},
+						{
+							"key": "applyGovernmentRebate",
+							"value": "true"
+						},
+						{
+							"key": "excess",
+							"value": "500"
+						},
+						{
+							"key": "extrasProduct",
+							"value": "55"
+						},
+						{
+							"key": "hospitalProduct",
+							"value": "51"
+						},
+						{
+							"key": "partner.dateOfBirth",
+							"value": "1988-01-01"
+						},
+						{
+							"key": "partner.previouslyHadHealthInsurance",
+							"value": "true"
+						},
+						{
+							"key": "partnerDob",
+							"value": "1988-01-01"
+						},
+						{
+							"key": "partnerPreviousCover",
+							"value": "true"
+						},
+						{
+							"key": "group",
+							"value": "96001"
+						},
+						{
+							"key": "section",
+							"value": "901"
+						},
+						{
+							"key": "rate",
+							"value": "B96"
+						},
+						{
+							"key": "rebateTier",
+							"value": "0"
+						},
+						{
+							"key": "applyRebate",
+							"value": "true"
+						}
+					]
 				}
 			},
 			"response": []
