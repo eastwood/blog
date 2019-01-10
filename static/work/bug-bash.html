@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-01-10 Thu 11:27 -->
+<!-- 2019-01-10 Thu 15:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Bug Bash - PHI Reform</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Clint Ryan" />
 <style type="text/css">
@@ -235,51 +235,44 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
+<h1 class="title">Bug Bash - PHI Reform</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgede896f">1. IN-PROGRESS [#A] Prepare for bug bash on Thursday</a>
+<li><a href="#orgf4e2b2f">1. Pricing API</a>
 <ul>
-<li><a href="#org06a5428">1.1. Resources</a></li>
-<li><a href="#org9f647df">1.2. Stories</a>
-<ul>
-<li><a href="#org13fc5d0">1.2.1. PHISL-1054</a></li>
-<li><a href="#org73311f0">1.2.2. PHISL-1056</a></li>
-<li><a href="#org0593955">1.2.3. PHISL-1057</a></li>
-<li><a href="#org0933ece">1.2.4. PHISL-1058</a></li>
-<li><a href="#org3f821d7">1.2.5. PHISL-733</a></li>
+<li><a href="#org763441f">1.1. Stories</a></li>
+<li><a href="#org79d8e11">1.2. Resources</a></li>
 </ul>
 </li>
+<li><a href="#org0f3f1e6">2. Bonus Round - Quote API</a>
+<ul>
+<li><a href="#org0069c59">2.1. Stories</a>
+<ul>
+<li><a href="#orga712d89">2.1.1. PHISL-1065</a></li>
+</ul>
+</li>
+<li><a href="#orgd34e8e7">2.2. Resources</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgede896f" class="outline-2">
-<h2 id="orgede896f"><span class="section-number-2">1</span> IN-PROGRESS [#A] Prepare for bug bash on Thursday</h2>
+<div id="outline-container-orgf4e2b2f" class="outline-2">
+<h2 id="orgf4e2b2f"><span class="section-number-2">1</span> Pricing API</h2>
 <div class="outline-text-2" id="text-1">
-<ul class="org-ul">
-<li>State "IN-PROGRESS" from "TODO"       <span class="timestamp-wrapper"><span class="timestamp">[2019-01-09 Wed 11:15]</span></span></li>
-</ul>
+<p>
+The PHI reform branch setup in pricing-api requires some battle testing. Your job is to hack, slash and test the DEBD pricing api branch, attempting to find any bugs that may have been missed. Below you'll find the stories which define the acceptance criteria and a brief description of the changes they make. You'll also find resources to the APIs that we're using and a Postman collection to import which will get you started with querying our pricing api.
+</p>
 </div>
-<div id="outline-container-org06a5428" class="outline-3">
-<h3 id="org06a5428"><span class="section-number-3">1.1</span> Resources</h3>
+<div id="outline-container-org763441f" class="outline-3">
+<h3 id="org763441f"><span class="section-number-3">1.1</span> Stories</h3>
 <div class="outline-text-3" id="text-1-1">
-<ul class="org-ul">
-<li><a href="https://pricing-api-phisl-phi-reform-release.kaos.internal.nibit.com.au/api-docs">DEBD Pricing Docs</a></li>
-<li><a href="https://staging.api.coreapps.nibdom.com.au/apidoc#!/pricing/getV2PricingArhiStandard">Core Apps Docs</a></li>
-<li><a href="collection.json">Postman</a></li>
-</ul>
 </div>
-</div>
-<div id="outline-container-org9f647df" class="outline-3">
-<h3 id="org9f647df"><span class="section-number-3">1.2</span> Stories</h3>
-<div class="outline-text-3" id="text-1-2">
-</div>
-<div id="outline-container-org13fc5d0" class="outline-4">
-<h4 id="org13fc5d0"><span class="section-number-4">1.2.1</span> <a href="https://nib-it.atlassian.net/browse/PHISL-1054">PHISL-1054</a></h4>
-<div class="outline-text-4" id="text-1-2-1">
+<ol class="org-ol">
+<li><a id="org9a28a0e"></a><a href="https://nib-it.atlassian.net/browse/PHISL-1054">PHISL-1054</a><br />
+<div class="outline-text-6" id="text-1-1-0-0-1">
 <ul class="org-ul">
 <li>Basic integration with new v2/pricing/arhi API</li>
 <li>Main changes are cover_period_date_from is inclusive</li>
@@ -289,18 +282,16 @@ for the JavaScript code in this tag.
 <li>frequency is now 'Weekly', 'Fortnightly', etc</li>
 </ul>
 </div>
-</div>
-<div id="outline-container-org73311f0" class="outline-4">
-<h4 id="org73311f0"><span class="section-number-4">1.2.2</span> <a href="https://nib-it.atlassian.net/browse/PHISL-1056">PHISL-1056</a></h4>
-<div class="outline-text-4" id="text-1-2-2">
+</li>
+<li><a id="orged5904d"></a><a href="https://nib-it.atlassian.net/browse/PHISL-1056">PHISL-1056</a><br />
+<div class="outline-text-6" id="text-1-1-0-0-2">
 <ul class="org-ul">
 <li>Same as 1054, but for the split invoicing endpoint</li>
 </ul>
 </div>
-</div>
-<div id="outline-container-org0593955" class="outline-4">
-<h4 id="org0593955"><span class="section-number-4">1.2.3</span> <a href="https://nib-it.atlassian.net/browse/PHISL-1057">PHISL-1057</a></h4>
-<div class="outline-text-4" id="text-1-2-3">
+</li>
+<li><a id="org313448a"></a><a href="https://nib-it.atlassian.net/browse/PHISL-1057">PHISL-1057</a><br />
+<div class="outline-text-6" id="text-1-1-0-0-3">
 <ul class="org-ul">
 <li>[1] Core API has assessment_date_person_1 and assessment_date_person_2 fields</li>
 <li>[2] Pricing API takes two parameters:
@@ -312,31 +303,71 @@ for the JavaScript code in this tag.
 <li>There is a few other fields in review environment: previous_fund_discount_person_1, previous_fund_discount_person_2 which have not been mapped on <a href="https://git.nib.com.au/nib-au/pricing-api/pull/47/files">https://git.nib.com.au/nib-au/pricing-api/pull/47/files</a></li>
 </ul>
 </div>
-</div>
-<div id="outline-container-org0933ece" class="outline-4">
-<h4 id="org0933ece"><span class="section-number-4">1.2.4</span> <a href="https://nib-it.atlassian.net/browse/PHISL-1058">PHISL-1058</a></h4>
-<div class="outline-text-4" id="text-1-2-4">
+</li>
+<li><a id="org0635280"></a><a href="https://nib-it.atlassian.net/browse/PHISL-1058">PHISL-1058</a><br />
+<div class="outline-text-6" id="text-1-1-0-0-4">
 <ul class="org-ul">
 <li>Same as above, but for split invoice</li>
 </ul>
 </div>
-</div>
-<div id="outline-container-org3f821d7" class="outline-4">
-<h4 id="org3f821d7"><span class="section-number-4">1.2.5</span> <a href="https://nib-it.atlassian.net/browse/PHISL-733">PHISL-733</a></h4>
-<div class="outline-text-4" id="text-1-2-5">
+</li>
+<li><a id="orgc50cd62"></a><a href="https://nib-it.atlassian.net/browse/PHISL-733">PHISL-733</a><br />
+<div class="outline-text-6" id="text-1-1-0-0-5">
 <ul class="org-ul">
 <li>Calculates the first payment amount</li>
 <li>Passes the cover_date_from and cover_date_to.</li>
 <li>Core Apps should return the first payment amount inside of the <code>payment_for_premium</code> fields</li>
 </ul>
 </div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org79d8e11" class="outline-3">
+<h3 id="org79d8e11"><span class="section-number-3">1.2</span> Resources</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><a href="https://pricing-api-phisl-phi-reform-release.kaos.internal.nibit.com.au/api-docs">DEBD Pricing Docs</a></li>
+<li><a href="https://staging.api.coreapps.nibdom.com.au/apidoc#!/pricing/getV2PricingArhiStandard">Core Apps Docs</a></li>
+<li><a href="collection.json">Postman</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0f3f1e6" class="outline-2">
+<h2 id="org0f3f1e6"><span class="section-number-2">2</span> Bonus Round - Quote API</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The PHI Reform has PHISL-1065 branch which requires testing. Your job is to hack and slash your way to glory. Find and notify any bugs you find.
+</p>
+</div>
+<div id="outline-container-org0069c59" class="outline-3">
+<h3 id="org0069c59"><span class="section-number-3">2.1</span> Stories</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orga712d89" class="outline-4">
+<h4 id="orga712d89"><span class="section-number-4">2.1.1</span> <a href="https://nib-it.atlassian.net/browse/PHISL-1065">PHISL-1065</a></h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>Maps ageBasedDiscountAssessmentDate =&gt; assessment_date_person_1</li>
+<li>Maps partnerAgeBasedDiscountAssessmentDate =&gt; assessment_date_person_2</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd34e8e7" class="outline-3">
+<h3 id="orgd34e8e7"><span class="section-number-3">2.2</span> Resources</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><a href="https://confluence.nib.com.au/pages/viewpage.action?spaceKey=PBC&amp;title=Quote+API+changes">https://confluence.nib.com.au/pages/viewpage.action?spaceKey=PBC&amp;title=Quote+API+changes</a></li>
+<li><a href="collection_two.json">Postman</a></li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Clint Ryan</p>
-<p class="date">Created: 2019-01-10 Thu 11:27</p>
+<p class="date">Created: 2019-01-10 Thu 15:18</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

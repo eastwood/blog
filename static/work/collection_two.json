@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "28ccf7fd-d95d-472e-9062-14640889f1e5",
+		"name": "OMNI Quote API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Default Quote Session",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"should have default properties set to null\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.data.productSelection).to.eql(null);",
+							"    pm.expect(jsonData.data.financialDetails).to.eql(null);",
+							"    pm.expect(jsonData.data.governmentDetails).to.eql(null);",
+							"    pm.expect(jsonData.data.personalDetails).to.eql(null);",
+							"    pm.expect(jsonData.data.contactDetails).to.eql(null);",
+							"    pm.expect(jsonData.data.joinProgress).to.eql(null);",
+							"    pm.expect(jsonData.data.experiments).to.eql(null);",
+							"});",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"coverStartDate\", Date.create('today').format('{yyyy}-{MM}-{dd}'));",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productSelection\": null,\n\t\"financialDetails\": null,\n\t\"governmentDetails\": null,\n\t\"personalDetails\": null,\n\t\"contactDetails\": null,\n\t\"joinProgress\": null,\n\t\"experiments\": null\n}"
+				},
+				"url": {
+					"raw": "{{HTTP_PROTOCOL}}://{{APP_NAME}}{{SLICE}}{{HOSTNAME}}/session",
+					"protocol": "{{HTTP_PROTOCOL}}",
+					"host": [
+						"{{APP_NAME}}{{SLICE}}{{HOSTNAME}}"
+					],
+					"path": [
+						"session"
+					]
+				},
+				"description": "Create a session"
+			},
+			"response": [
+				{
+					"name": "Create Default Quote Session",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"name": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ProductSelection\": null,\n\t\"FinancialDetails\": null,\n\t\"GovernmentDetails\": null,\n\t\"PersonalDetails\": null,\n\t\"ContactDetails\": null,\n\t\"JoinProgress\": null,\n\t\"Experiments\": null\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/session",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"session"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 12 Sep 2017 08:45:58 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9e-UfWq2MkVdmwCXYjooj2k/yuDpSE\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains",
+							"name": "Strict-Transport-Security",
+							"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"name": "X-Content-Type-Options",
+							"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off",
+							"name": "X-DNS-Prefetch-Control",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen",
+							"name": "X-Download-Options",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"name": "X-Frame-Options",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "b274cb59-d179-4ec2-af75-7f24fb81b89c",
+							"name": "X-Request-Id",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"name": "X-XSS-Protection",
+							"description": "Cross-site scripting (XSS) filter"
+						}
+					],
+					"cookie": [],
+					"body": "{\n\t\"Id\": \"<SessionId>\",\n    \"ProductSelection\": null,\n    \"FinancialDetails\": null,\n    \"GovernmentDetails\": null,\n    \"PersonalDetails\": null,\n    \"ContactDetails\": null,\n    \"JoinProgress\": null,\n    \"Experiments\": null\n}"
+				}
+			]
+		}
+	]
+}
